@@ -3,8 +3,6 @@ import { NavigationContainer } from "@react-navigation/native";
 
 const StackNavigation = () => {
 
-const ()
-
 
   return (
     <NavigationContainer>
