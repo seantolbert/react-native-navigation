@@ -1,18 +1,18 @@
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { Pressable } from "react-native";
 import TweetContent from "./TweetContent";
 
-const Tweet = () => {
+const Tweet = ({ tweet }) => {
   const { navigate } = useNavigation();
   return (
-    <Pressable onPress={() => {
-        navigate('')
-    }}>
-      <TweetContent />
+    <Pressable
+      onPress={() => {
+        navigate("TweetDetailsScreen", { tweet });
+      }}
+    >
+      <TweetContent tweet={tweet} />
     </Pressable>
   );
 };
 
 export default Tweet;
-
-const styles = StyleSheet.create({});
